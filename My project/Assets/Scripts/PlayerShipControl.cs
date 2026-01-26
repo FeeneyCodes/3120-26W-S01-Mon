@@ -9,6 +9,8 @@ public class PlayerShipControl : MonoBehaviour
     public Vector3 velocity = Vector3.zero;  // or this:  = Vector3(0.0f, 0.0f, 0.0f);
     public Vector3 maxVelocity = new Vector3(1.0f, 1.0f, 1.0f);
 
+    public AudioSource CrashSound;
+//    public AudioSource GameMusic;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,19 +21,19 @@ public class PlayerShipControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Time.deltaTime);
+        //Debug.Log(Time.deltaTime);
 
         float deltaSteeringForce = Time.deltaTime * steeringForce;
 
         if ( Input.GetKey(KeyCode.A) )
         {
             //CurrentPosition.x += 0.1f;
-            velocity += new Vector3( +deltaSteeringForce, 0.0f, 0.0f);   // Changing the velocity
+            velocity += new Vector3( -deltaSteeringForce, 0.0f, 0.0f);   // Changing the velocity
         }
         if ( Input.GetKey(KeyCode.D) )
         {
             //CurrentPosition.x -= 0.1f;
-            velocity += new Vector3( -deltaSteeringForce, 0.0f, 0.0f);   // Changing the velocity
+            velocity += new Vector3( +deltaSteeringForce, 0.0f, 0.0f);   // Changing the velocity
         }
 
         // TODO: Add an if statement to limit the max velocity
@@ -53,4 +55,18 @@ public class PlayerShipControl : MonoBehaviour
 
         transform.position = CurrentPosition;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //Debug.Log("OnTriggerEnter: Something hit us!");  
+        // We crashed into something
+        // Play a noise!
+        CrashSound.Play();
+    }
+
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    Debug.Log("OnTriggerExit: Something hit us!");  
+        
+    //}
 }

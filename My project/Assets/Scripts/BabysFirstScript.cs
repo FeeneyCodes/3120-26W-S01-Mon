@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BabysFirstScript : MonoBehaviour
 {
-    private int ageYears = 0;
+//    private int ageYears = 0;
     public string FirstName = "Ted";
     public float heightInmm = 111;
     public string exciting = "yes, this class IS";
