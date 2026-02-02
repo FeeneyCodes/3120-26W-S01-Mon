@@ -1,3 +1,10 @@
+FunWithRotations/Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text
+FunWithRotations/Library/PackageCache/com.unity.burst@1df634d836b8/.Runtime/burst-llvm-19-arm64.dll filter=lfs diff=lfs merge=lfs -text
+FunWithRotations/Library/PackageCache/com.unity.burst@1df634d836b8/.Runtime/burst-llvm-19.dll filter=lfs diff=lfs merge=lfs -text
+FunWithRotations/Library/PackageCache/com.unity.burst@1df634d836b8/.Runtime/libburst-llvm-10.dylib filter=lfs diff=lfs merge=lfs -text
+FunWithRotations/Library/PackageCache/com.unity.burst@1df634d836b8/.Runtime/libburst-llvm-19.dylib filter=lfs diff=lfs merge=lfs -text
+FunWithRotations/Library/PackageCache/com.unity.burst@1df634d836b8/.Runtime/libburst-llvm-19.so filter=lfs diff=lfs merge=lfs -text
+FunWithRotations/Library/PackageCache/com.unity.burst@1df634d836b8/.Runtime/hostmac/dsymutil filter=lfs diff=lfs merge=lfs -text
 My[[:space:]]project/Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text
 My[[:space:]]project/Library/PackageCache/com.unity.burst@1df634d836b8/.Runtime/burst-llvm-19-arm64.dll filter=lfs diff=lfs merge=lfs -text
 My[[:space:]]project/Library/PackageCache/com.unity.burst@1df634d836b8/.Runtime/burst-llvm-19.dll filter=lfs diff=lfs merge=lfs -text
